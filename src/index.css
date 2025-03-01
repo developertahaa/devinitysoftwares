@@ -1,0 +1,177 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Parkinsans:wght@300..800&family=Space+Grotesk:wght@300..700&display=swap');
+*{
+    font-family: "Space Grotesk", serif;
+    font-weight: 400;
+}
+body{
+    overflow-x: hidden;
+}
+.tech {
+    mix-blend-mode: multiply; /* Removes white background */
+    filter: brightness(1.1) contrast(1.2); /* Enhances clarity */
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .tech:hover {
+    transform: scale(1.1); /* Smooth hover effect */
+  }
+  /* BrandsSection.css */
+.brand-logo {
+  /* Enhance image quality */
+  image-rendering: -webkit-optimize-contrast; /* For Chrome/Safari */
+  image-rendering: crisp-edges; /* For Firefox */
+  image-rendering: pixelated; /* Fallback for high-res sharpness */
+
+  /* Apply black filter */
+  filter: grayscale(100%) brightness(0%) invert(0%);
+  
+  /* Smooth scaling */
+  transition: transform 0.3s ease;
+}
+
+/* Optional hover effect */
+.brand-logo:hover {
+  transform: scale(1.1);
+}
+/* BrandsSection.css */
+
+/* Container for each logo */
+.logo-container {
+  position: relative;
+  width: 160px; /* Increased from w-40 (160px instead of 10rem) */
+  height: 80px; /* Increased from h-16 (80px instead of 4rem) */
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f5f5f5; /* Light gray background for contrast */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo image styles */
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(0.8); /* Black filter effect */
+  transition: all 0.3s ease;
+  padding: 8px; /* Adds some internal spacing */
+  image-rendering: -webkit-optimize-contrast; /* Improves quality */
+  image-rendering: crisp-edges; /* Enhances sharpness */
+}
+
+/* Hover effects */
+.logo-container:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.logo-container:hover .brand-logo {
+  filter: grayscale(0%) brightness(1); /* Remove black filter on hover */
+}
+
+/* Creative overlay effect */
+.logo-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      45deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(255, 255, 255, 0.1)
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.logo-container:hover::after {
+  opacity: 1;
+}
+
+/* Optional: Add subtle animation for loading */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.95);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.logo-container {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .logo-container {
+      width: 120px;
+      height: 60px;
+  }
+}
+.items{
+  color: black !important;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  border: 3px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Scroll Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up.aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.zoom-in.aos-animate {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.slide-right {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-right.aos-animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+  

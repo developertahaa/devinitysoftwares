@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+   "jsx": "react-jsx", // or "react"
+    "module": "esnext",
+    "target": "esnext",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    
+    "noEmit": true
+  },
+  
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
