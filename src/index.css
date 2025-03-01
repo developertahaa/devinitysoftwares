@@ -51,17 +51,6 @@ body{
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo image styles */
-.brand-logo {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: grayscale(100%) brightness(0.8); /* Black filter effect */
-  transition: all 0.3s ease;
-  padding: 8px; /* Adds some internal spacing */
-  image-rendering: -webkit-optimize-contrast; /* Improves quality */
-  image-rendering: crisp-edges; /* Enhances sharpness */
-}
 
 /* Hover effects */
 .logo-container:hover {
@@ -173,5 +162,21 @@ body{
   transform: translateX(0);
 }
 
+  .brand-logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    padding: 2px; /* Adds some internal spacing */
+    image-rendering: -webkit-optimize-contrast; /* Improves quality */
+    image-rendering: crisp-edges; /* Enhances sharpness */
+  }
+  @media (min-width: 768px) {
+    .brand-logo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
 
   
